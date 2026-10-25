@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FFF8F8">
+  <meta name="description" content="一些会走向你的小念头。写给你，和那些忽然想起你的时刻。">
+  <title>一些会走向你的小念头</title>
+  <style>
+    :root{color-scheme:light;--paper:#fff8f8;--ink:#493c40;--muted:#826a74;--line:#f0dfe3;--accent:#d99aa9;--accent-ink:#a26379;--blush:#f9e9ec;--serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC","SimSun",serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+    *{box-sizing:border-box}html{background:var(--paper);-webkit-text-size-adjust:100%;scroll-behavior:auto}body{margin:0;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9}button,textarea{font:inherit}button{color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible,summary:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-ink);outline-offset:6px}[hidden]{display:none!important}::selection{background:#f3dce3}
+    .shell{max-width:1104px;margin:0 auto;padding:0 48px}.masthead{padding-top:max(34px,env(safe-area-inset-top));display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);min-height:103px;padding-bottom:22px}.masthead-label{font-size:12px;letter-spacing:.15em;color:var(--muted)}.progress{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:12px;font-variant-numeric:tabular-nums;color:var(--muted)}.progress-line{width:100px;height:2px;background:var(--line)}.progress-line span{display:block;width:20%;height:100%;background:var(--accent);transition:width .25s}
+    main{min-height:calc(100svh - 190px)}.scene{padding:66px 0 56px;animation:arrive .32s ease-out}.eyebrow{color:var(--muted);font-size:12px;letter-spacing:.14em;margin:0 0 26px;display:flex;align-items:center;gap:13px}.eyebrow::before{content:"";width:20px;height:1px;background:var(--accent)}h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:.035em;line-height:1.65;margin:0}h1{font-size:clamp(36px,4.5vw,54px);line-height:1.6}h2{font-size:clamp(26px,3vw,34px)}p{margin:0 0 21px}.intro p{margin:0}.intro p+p{margin-top:5px}.intro{color:var(--muted);font-size:14px;max-width:480px;margin:18px 0 34px;line-height:1.9}.cover{min-height:620px;display:grid;grid-template-columns:1fr 250px;align-items:center;gap:48px;padding-top:70px}.cover h1 span{display:block}.cover .subtitle{font-family:var(--serif);font-size:18px;margin:22px 0 36px}.cover-note{font-size:13px;color:var(--muted);padding:0;margin:0 0 37px}.cover-note p{margin:0 0 3px}.cover-note p:last-child{margin:0}.art{display:flex;justify-content:center;align-items:center;min-width:0}.art img{display:block;max-width:100%;height:auto;object-fit:contain}.cover .art{align-self:center;padding-bottom:25px}.cover img{width:139px;max-height:270px}.primary,.secondary{min-height:48px;border:1px solid #ebc8d0;border-radius:3px;background:transparent;padding:10px 21px;font-size:14px;letter-spacing:.04em;display:inline-flex;align-items:center;justify-content:center;gap:26px;transition:background .18s,transform .18s}.primary{background:#f9e9ec;border-color:#f9e9ec}.primary::after{content:"→";font-size:18px;color:var(--accent)}.secondary{border-color:var(--line);background:#fff}button:active{transform:translateY(1px)}.text-button{background:none;border:0;padding:10px 0;min-height:44px;font-size:12px;color:var(--muted);text-decoration:underline;text-underline-offset:5px;text-decoration-color:#d8b2bf}.actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:38px}.reading{max-width:610px;margin:0 auto}.prose{font-family:var(--serif);font-size:18px;line-height:2.1;letter-spacing:.025em}.prose p{margin-bottom:24px}.prose .pause{margin-top:38px}.prose .key{font-size:22px;margin-top:36px;margin-bottom:32px}.small-art{justify-content:flex-end;max-width:610px;margin:0 auto 28px}.small-art img{width:74px;max-height:130px}.thought-body{position:relative}.thoughts{max-width:670px;margin:0 auto}.thought-header{display:flex;justify-content:space-between;gap:24px;align-items:start}.thought-header>div{flex:1;min-width:0}.thought-header .art{width:85px;flex:0 0 85px;margin-top:25px}.thought-header img{width:85px}.thought-header .intro{margin-bottom:32px}.entries{border-bottom:1px solid var(--line)}details{border-top:1px solid var(--line)}summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;min-height:78px;font-size:16px;line-height:1.7;padding:16px 0}summary::-webkit-details-marker{display:none}.entry-number{font-size:11px;color:var(--accent);font-family:var(--sans);letter-spacing:.06em;flex:none}summary::after{content:"+";margin-left:auto;font-size:22px;font-weight:300;color:var(--muted);padding-left:8px}details[open] summary::after{content:"−"}.entry-body{padding:0 36px 16px;font-family:var(--serif);font-size:17px;line-height:2}.entry-body p{margin-bottom:18px}.entry-body .ordinary{margin:26px 0;font-size:20px}.choice-layout{max-width:670px;margin:auto}.question{font-family:var(--serif);font-size:20px;margin:32px 0 20px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{min-height:58px;display:flex;align-items:center;justify-content:space-between;text-align:left;border:1px solid var(--line);border-radius:3px;padding:13px 20px;background:transparent;font-size:15px;gap:12px}.choice::after{content:"";width:13px;height:13px;flex:none;border:1px solid #d0aab6;border-radius:50%}.choice[aria-checked="true"]{background:var(--blush);border-color:#d99aa9}.choice[aria-checked="true"]::after{background:#a26379;border-color:#a26379;box-shadow:inset 0 0 0 3px var(--blush)}.reply{margin-top:28px;border-left:1px solid #ebc8d0;padding-left:22px;font-family:var(--serif);font-size:17px;line-height:2;max-width:540px}.reply p{margin-bottom:16px}.reply p:last-child{margin-bottom:0}.choice-art{margin-top:32px;justify-content:flex-end}.choice-art img{width:72px;max-height:130px}.echo{font-family:var(--serif);color:var(--muted);font-size:16px;line-height:2;border-left:1px solid var(--line);padding-left:20px;margin:34px 0 0}.final-line{font-family:var(--serif);font-size:clamp(23px,3vw,29px);font-weight:400;letter-spacing:.03em;line-height:1.9;margin:52px 0 30px}.ending-art{justify-content:flex-start;margin:34px 0}.ending-art img{width:78px;max-height:145px}.ending .actions{gap:12px}.share{margin-top:18px}.share-status{font-size:12px;color:var(--muted);margin:10px 0;min-height:23px}.manual-share{margin-top:12px}.manual-share label{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}.manual-share textarea{display:block;width:100%;min-height:120px;resize:vertical;border:1px solid var(--line);background:transparent;padding:12px;color:var(--ink);font-size:14px;line-height:1.8}.closed{padding:65px 0 25px}.closed .final-line{margin-top:24px}.closed p{font-size:14px;color:var(--muted)}.footer{border-top:1px solid var(--line);padding:18px 0 max(23px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:11px;letter-spacing:.1em;color:var(--muted)}.back{font-size:12px;background:none;border:0;padding:8px 0;min-height:44px;color:var(--muted)}.footer-note{margin-left:auto}.no-script{padding:24px;color:var(--ink)}
+    @keyframes arrive{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}@media(hover:hover){.primary:hover{background:#f2dce3}.secondary:hover,.choice:hover{border-color:#d99aa9}.text-button:hover,.back:hover{color:var(--ink)}}
+    @media(max-width:650px){.shell{padding-left:max(25px,env(safe-area-inset-left));padding-right:max(25px,env(safe-area-inset-right))}.masthead{min-height:86px;padding-top:max(23px,env(safe-area-inset-top));padding-bottom:18px}.masthead-label{font-size:10px;letter-spacing:.08em}.progress{gap:10px;font-size:11px}.progress-line{width:50px}.scene{padding-top:38px;padding-bottom:40px}.eyebrow{font-size:11px;margin-bottom:23px}.cover{min-height:calc(100svh - 174px);display:flex;flex-direction:column;align-items:stretch;gap:0;padding-top:40px}.cover h1{font-size:36px}.cover .subtitle{font-size:16px;margin:16px 0 27px}.cover-note{font-size:12px;margin-bottom:25px}.cover .art{align-self:flex-end;margin:-12px 17px 20px 0;padding:0}.cover img{width:65px;max-height:128px}.cover .actions{margin-top:0}.prose{font-size:17px;line-height:2.05;letter-spacing:.015em}.prose p{margin-bottom:23px}.prose .pause{margin-top:33px}.prose .key{font-size:21px;margin-top:31px}.small-art{margin-bottom:20px}.small-art img{width:55px;max-height:100px}.intro{font-size:13px;margin-top:14px;line-height:1.95}.thought-header{gap:14px;flex-wrap:wrap}.thought-header>div{flex-basis:100%}.thought-header .art{margin:-12px 0 20px auto;width:60px;flex-basis:60px}.thought-header img{width:60px}.thought-header .intro{margin-bottom:20px}h2{font-size:26px;letter-spacing:.015em}summary{font-size:15px;gap:12px;min-height:74px}.entry-body{padding-left:27px;padding-right:0;font-size:16px}.choices{gap:10px}.choice{padding:13px 14px;font-size:14px}.reply{font-size:16px;padding-left:18px}.question{margin-top:26px;font-size:19px}.choice-art{margin-top:25px}.actions{margin-top:29px}.ending .actions{align-items:stretch}.ending .actions button{flex:1;white-space:nowrap;padding-left:12px;padding-right:12px;gap:12px}.final-line{margin-top:42px}.footer{font-size:10px;letter-spacing:.04em;gap:12px}.footer-note{text-align:right}.ending-art img{width:63px;max-height:120px}.closed{padding-top:35px}}
+    @media(min-width:651px) and (max-width:900px){.cover{grid-template-columns:minmax(0,1fr) 150px;gap:24px}.cover img{width:110px}}
+    @media(max-width:360px){.shell{padding-left:20px;padding-right:20px}.cover h1{font-size:32px}.choices{grid-template-columns:1fr}.ending .actions{flex-direction:column}.masthead-label{letter-spacing:0}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+    /* Decorative images stay in the document flow, clear of text and controls. */
+    .miffy-cluster{display:grid;align-items:end;gap:24px 18px;max-width:100%;justify-self:end}
+    .cover .miffy-cluster .art{padding:0;margin:0;align-self:end}
+    .miffy-cluster .miffy-main{grid-column:2;grid-row:1 / 3}
+    .miffy-pair{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;max-width:100%;margin:32px 0 26px auto}
+    .miffy-pair-left{margin-left:0;margin-right:auto}
+    .miffy-pair .art{flex:none;margin:0}
+    .prose-aside{justify-content:flex-end;margin:27px 0 30px;padding-right:12px}
+    .prose-aside-left{justify-content:flex-start;padding-right:0;padding-left:12px}
+    .miffy-line{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:36px;width:100%;max-width:340px;margin-left:auto}
+    @media(min-width:651px) and (max-width:900px){.miffy-cluster{gap:20px 12px}}
+    @media(max-width:650px){
+      .cover .miffy-cluster{align-self:flex-end;margin:28px 0 8px;gap:17px 18px}
+      .miffy-pair{gap:23px;margin-top:28px;margin-bottom:22px}
+      .prose-aside{margin-top:24px;margin-bottom:26px}
+      .miffy-line{max-width:280px;gap:20px;margin-top:28px}
+    }
+
+    /* User-supplied JPGs have near-square canvases; retain every original pixel. */
+    .miffy-cluster{width:246px;grid-template-columns:100px 128px}
+    .cover .miffy-cluster .miffy-main img{width:128px;max-height:165px}
+    .cover .miffy-cluster .miffy-wide img{width:100px;max-height:110px}
+    .cover .miffy-cluster .miffy-tiny img{width:62px;max-height:80px}
+    .miffy-pair{width:225px}
+    .miffy-pair .art img{width:76px;max-height:108px}
+    .miffy-pair .miffy-tiny img{width:65px;max-height:88px}
+    .miffy-pair .miffy-wide img{width:100px;max-height:108px}
+    .prose-aside img{width:64px;max-height:80px}
+    .miffy-line .miffy-main img{width:88px;max-height:106px}
+    .miffy-line .miffy-wide img{width:94px;max-height:108px}
+    .miffy-line .miffy-tiny img{width:72px;max-height:94px}
+    @media(min-width:651px) and (max-width:900px){
+      .miffy-cluster{width:150px;grid-template-columns:repeat(2,minmax(0,1fr))}
+      .cover .miffy-cluster .miffy-main img{width:82px}
+      .cover .miffy-cluster .miffy-wide img{width:70px}
+      .cover .miffy-cluster .miffy-tiny img{width:45px}
+    }
+    @media(max-width:650px){
+      .cover .miffy-cluster{width:220px;grid-template-columns:96px 106px}
+      .cover .miffy-cluster .miffy-main img{width:106px;max-height:140px}
+      .cover .miffy-cluster .miffy-wide img{width:96px;max-height:102px}
+      .cover .miffy-cluster .miffy-tiny img{width:54px;max-height:70px}
+      .miffy-pair{width:200px}
+      .miffy-pair .art img{width:64px;max-height:88px}
+      .miffy-pair .miffy-tiny img{width:55px;max-height:76px}
+      .miffy-pair .miffy-wide img{width:85px;max-height:90px}
+      .prose-aside img{width:50px;max-height:62px}
+      .miffy-line .miffy-main img{width:72px;max-height:86px}
+      .miffy-line .miffy-wide img{width:78px;max-height:90px}
+      .miffy-line .miffy-tiny img{width:60px;max-height:78px}
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="masthead"><div class="progress" aria-label="阅读进度"><div class="progress-line" aria-hidden="true"><span id="progress-fill"></span></div><span id="page-number" aria-live="polite">1 / 5</span></div></header>
+    <main id="main">
+      <section class="scene cover" data-scene="0" aria-labelledby="cover-title">
+        <div>
+          <h1 id="cover-title" tabindex="-1"><span>一些会走向你的</span><span>小念头</span></h1>
+          <p class="subtitle">写给你，和那些忽然想起你的时刻。</p>
+          <div class="cover-note"><p>记录者：成唯文</p><p>调查对象：谭伶俐</p></div>
+          <div class="actions"><button type="button" class="primary" data-next>打开看看</button></div>
+        </div>
+        <div class="miffy-cluster" aria-hidden="true"><div class="art miffy-main"><img src="assets/miffy_new/2369cdd6a84a7f76aafdadf8784659d5.jpg" alt="" width="926" height="1104" decoding="async"></div><div class="art miffy-wide"><img src="assets/miffy_new/24cebb657d0120e669afeee517627c9d.jpg" alt="" width="990" height="968" decoding="async"></div><div class="art miffy-tiny"><img src="assets/miffy_new/8e7c2731e5c3c1c3f2a8c926b28b9348.jpg" alt="" width="1028" height="1098" decoding="async"></div></div>
+      </section>
+      <section class="scene" data-scene="1" aria-labelledby="thought-title" hidden>
+        <div class="reading">
+          <h2 class="eyebrow" id="thought-title" tabindex="-1">第二幕 · 突然想起你</h2>
+          <div class="prose">
+            <p>有时候，我也说不清是从什么时候开始想你的。</p>
+            <p>可能只是看到一片云，听见一句话，或者走到一个再普通不过的地方。</p>
+            <p>明明是很小的一件事，却忽然想把它讲给你听。</p>
+            <div class="art prose-aside"><img src="assets/miffy_new/2bd06a4451b76013b68c9d8f60da47c9.jpg" alt="" width="1120" height="1122" decoding="async"></div>
+            <p class="pause">后来才发现，我想分享的好像不只是那件事。</p>
+            <p class="pause">是你。</p>
+            <p>想让你也在我的日常里。</p>
+            <p>哪怕只是听我说一句没头没尾的话，或者陪我把一个很普通的瞬间过得久一点。</p>
+          </div>
+          <div class="miffy-pair" aria-hidden="true"><div class="art miffy-tiny"><img src="assets/miffy_new/6146ea1f59504aea8bfc6050185e7e3e.jpg" alt="" width="1012" height="1060" decoding="async"></div><div class="art miffy-wide"><img src="assets/miffy_new/2369cdd6a84a7f76aafdadf8784659d5.jpg" alt="" width="926" height="1104" decoding="async"></div></div>
+          <div class="actions"><button type="button" class="primary" data-next>再往下看</button></div>
+        </div>
+      </section>
+      <section class="scene" data-scene="2" aria-labelledby="moments-title" hidden>
+        <div class="thoughts">
+          <p class="eyebrow">第三幕 · 那些没有来由的瞬间</p>
+          <div class="thought-header"><div>
+            <h2 id="moments-title" tabindex="-1">有几个念头，想给你看看。</h2>
+            <div class="intro"><p>都是一些很小的事。</p><p>小到不一定值得讲，却总是想让你知道。</p></div>
+          </div><div class="art"><img src="assets/miffy_new/2369cdd6a84a7f76aafdadf8784659d5.jpg" alt="" width="926" height="1104"></div></div>
+          <div class="entries">
+            <details><summary><span class="entry-number" aria-hidden="true">01</span>一个很小的瞬间</summary><div class="entry-body">
+            <p>看见一点好看的东西，会下意识想留给你。</p>
+            <p>等反应过来，才发现我已经在心里替你看过一遍了。</p>
+            <p>有时候想分享的也不是风景，只是想让你知道，我看见了它，也想起了你。</p>
+            </div></details>
+            <details><summary><span class="entry-number" aria-hidden="true">02</span>一条没发出去的消息</summary><div class="entry-body">
+            <p>有时候想了很多话，删删改改，最后只剩一句：</p>
+            <p class="ordinary">你在干嘛。</p>
+            <p>不是没话说。</p>
+            <p>只是想你的时候，反而不知道该从哪一句开始。</p>
+            <p>好像说得太轻，怕你没听见；说得太认真，又有一点不好意思。</p>
+            </div></details>
+            <details><summary><span class="entry-number" aria-hidden="true">03</span>关于拥抱的设想</summary><div class="entry-body">
+            <p>我偶尔会想，下次见面，第一句话应该说什么。</p>
+            <p>后来觉得，不必想得太周全。</p>
+            <p>见到你的时候，先抱一抱。</p>
+            <p>剩下的话，总会慢慢找到出口。</p>
+            </div></details>
+            <details><summary><span class="entry-number" aria-hidden="true">04</span>如果你现在在</summary><div class="entry-body">
+            <p>大概会先看看你。</p>
+            <p>然后装作若无其事地说点别的，像是那些在心里排练过很多遍的话，突然都不着急了。</p>
+            <p>只是会想再靠近你一点。</p>
+            <p>再一点。</p>
+            <p>好像这样，就能把没见面的那些日子，慢慢补回来。</p>
+            </div></details>
+          </div>
+          <div class="miffy-pair miffy-pair-left" aria-hidden="true"><div class="art miffy-tiny"><img src="assets/miffy_new/24cebb657d0120e669afeee517627c9d.jpg" alt="" width="990" height="968" decoding="async"></div><div class="art miffy-wide"><img src="assets/miffy_new/68594cf8d69d68d3d1adfecf2e11b6f0.jpg" alt="" width="1166" height="1064" decoding="async"></div></div>
+          <div class="actions"><button type="button" class="primary" data-next>然后呢？</button></div>
+        </div>
+      </section>
+      <section class="scene" data-scene="3" aria-labelledby="together-title" hidden>
+        <div class="choice-layout">
+          <p class="eyebrow">第四幕 · 如果现在可以见到你</p>
+          <h2 id="together-title" tabindex="-1">如果现在就能见到你。</h2>
+          <div class="intro"><p>不想那么多了。</p><p>先想想，我们会做些什么。</p></div>
+          <p class="question" id="choice-question">你想先做什么？</p>
+          <div class="choices" role="radiogroup" aria-labelledby="choice-question"><button type="button" class="choice" role="radio" aria-checked="false" tabindex="0" data-choice="hug">先抱一下</button><button type="button" class="choice" role="radio" aria-checked="false" tabindex="-1" data-choice="walk">一起散步</button><button type="button" class="choice" role="radio" aria-checked="false" tabindex="-1" data-choice="quiet">坐着发呆</button><button type="button" class="choice" role="radio" aria-checked="false" tabindex="-1" data-choice="food">吃点好吃的</button></div>
+          <div id="choice-reply" class="reply" aria-live="polite" aria-atomic="true" hidden></div>
+          <div class="miffy-line" aria-hidden="true"><div class="art miffy-wide"><img src="assets/miffy_new/2bd06a4451b76013b68c9d8f60da47c9.jpg" alt="" width="1120" height="1122" decoding="async"></div><div class="art miffy-main"><img src="assets/miffy_new/4797997e31cd4c0eec8cf01e30acbb91.jpg" alt="" width="1126" height="1146" decoding="async"></div><div class="art miffy-tiny"><img src="assets/miffy_new/524b2981254bd4edfcbfc91f90a7f5ad.jpg" alt="" width="1086" height="1058" decoding="async"></div></div>
+          <div class="actions"><button type="button" class="primary" data-next>继续看看</button></div>
+        </div>
+      </section>
+      <section class="scene ending" data-scene="4" aria-labelledby="ending-title" hidden>
+        <div class="reading" id="ending-letter">
+          <h2 class="eyebrow" id="ending-title" tabindex="-1">第五幕 · 最后一点想说的话</h2>
+          <div class="prose">
+            <p>我发现，想念好像并不总是一件很郑重的事。</p>
+            <p>它常常发生在一些没有准备的瞬间。</p>
+            <p>看到一件有趣的东西，会想发给你。</p>
+            <p>听见一句话，会想知道你听到之后会怎么回答。</p>
+            <p>有时候明明没有什么特别的事，却还是想和你说说话。</p>
+            <p>好像一天里总有一些小小的空隙，会自然地留给你。</p>
+            <p class="pause">我也不是每一次都知道该怎么表达。</p>
+            <p>有些话想了很久，说出来却只剩下短短几句。</p>
+            <p>有些念头明明很清楚，真的要讲给你听时，又觉得好像不用说得那么明白。</p>
+            <p class="pause">因为你大概已经慢慢变成了我生活里很自然的一部分。</p>
+            <p>不是每时每刻都要想起。</p>
+            <p>只是想起的时候，会觉得，嗯，是你啊。</p>
+            <p>然后心里就安静了一点。</p>
+            <p class="pause">所以，这些零零碎碎的话，就先放在这里。</p>
+            <p>等你看到的时候，如果刚好也想起我，那就更好了。</p>
+            <p class="pause">至于下一次见面。</p>
+            <p>我想先抱抱你。</p>
+            <p>不必急着说什么。</p>
+            <p>见到你，就已经很好了。</p>
+          </div>
+          <p class="echo" id="ending-echo" hidden></p>
+          <p class="final-line"><strong style="font-weight:400">下次见面，先抱一下吧。</strong></p>
+          <div class="art ending-art"><img src="assets/miffy_new/8e7c2731e5c3c1c3f2a8c926b28b9348.jpg" alt="" width="1028" height="1098" decoding="async"></div>
+          <div class="actions"><button type="button" class="primary" id="keep">收下这份想念</button><button type="button" class="secondary" data-restart>再读一遍</button></div><div class="share"><button type="button" class="text-button" id="share">把我的选择寄给他</button><p class="share-status" id="share-status" role="status"></p><div class="manual-share" id="manual-share" hidden><label for="share-text">可以选中并复制这段文字，再亲手发给他。</label><textarea id="share-text" readonly></textarea><button type="button" class="text-button" id="select-share">选中分享文字</button></div></div></div>
+        <div id="closed" class="reading closed" hidden>
+          <p class="eyebrow">这份想念，收好了。</p>
+          <h2 class="final-line" id="closed-title" tabindex="-1">下次见面，先抱一下吧。</h2>
+          <div class="art ending-art"><img src="assets/miffy_new/8e7c2731e5c3c1c3f2a8c926b28b9348.jpg" alt="" width="1028" height="1098" decoding="async"></div>
+          <div class="actions"><button type="button" class="secondary" data-restart>再读一遍</button></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><button type="button" id="back" class="back" hidden>← 上一幕</button><span class="footer-note">一些会走向你的小念头</span></footer>
+  </div>
+  <noscript><p class="no-script">这封信需要 JavaScript 才能翻页。请在浏览器中启用 JavaScript 后重新打开。</p></noscript>
+  <script>
+    'use strict';
+    (() => {
+      const scenes = Array.from(document.querySelectorAll('[data-scene]'));
+      const choiceButtons = Array.from(document.querySelectorAll('[data-choice]'));
+      const byId = id => document.getElementById(id);
+      const state = { scene: 0, choice: null, closed: false, revision: 0 };
+      const choices = {
+        "hug": {
+          "label": "先抱一下",
+          "reply": [
+            "我也想。",
+            "先抱一会儿，不急着说话。",
+            "有些想念，好像只有真的靠近了，才终于有了着落。"
+          ],
+          "echo": "那就先抱久一点。剩下的话，我们慢慢说。"
+        },
+        "walk": {
+          "label": "一起散步",
+          "reply": [
+            "那就走慢一点。",
+            "不必特意去哪里，也不用急着走完这段路。",
+            "只要你在旁边，普通的一段路，好像也值得记很久。"
+          ],
+          "echo": "那就一起慢慢走，晚一点到也没关系。"
+        },
+        "quiet": {
+          "label": "坐着发呆",
+          "reply": [
+            "好啊。",
+            "就安静地待一会儿。",
+            "偶尔看你一眼，偶尔说几句没什么意义的话。",
+            "如果什么都不做也很好，那就什么都不做。"
+          ],
+          "echo": "那就安静地待一会儿，把时间留给我们。"
+        },
+        "food": {
+          "label": "吃点好吃的",
+          "reply": [
+            "好。",
+            "一起挑喜欢的东西，慢慢吃，慢慢聊。",
+            "我想知道你最近喜欢什么，也想听你讲那些没有特别整理过的小事。"
+          ],
+          "echo": "那就一起吃点喜欢的，再慢慢聊那些没讲完的话。"
+        }
+      };
+      function showScene(index, focus = true) {
+        state.scene = Math.max(0, Math.min(4, index));
+        scenes.forEach((scene, i) => { scene.hidden = i !== state.scene; });
+        byId('page-number').textContent = `${state.scene + 1} / 5`;
+        byId('progress-fill').style.width = `${(state.scene + 1) * 20}%`;
+        byId('back').hidden = state.scene === 0 || state.closed;
+        if (state.scene === 4) {
+          byId('ending-echo').textContent = state.choice ? choices[state.choice].echo : '';
+          byId('ending-echo').hidden = !state.choice;
+        }
+        window.scrollTo(0, 0);
+        if (focus) scenes[state.scene].querySelector('[tabindex="-1"]').focus({ preventScroll: true });
+      }
+      function selectChoice(key) {
+        state.choice = key;
+        choiceButtons.forEach(button => {
+          const selected = button.dataset.choice === key;
+          button.setAttribute('aria-checked', String(selected));
+          button.tabIndex = selected ? 0 : -1;
+        });
+        const reply = byId('choice-reply');
+        reply.replaceChildren(...choices[key].reply.map(text => {
+          const p = document.createElement('p'); p.textContent = text; return p;
+        }));
+        reply.hidden = false;
+      }
+      function restart() {
+        state.choice = null; state.closed = false; state.revision++;
+        document.querySelectorAll('details').forEach(entry => { entry.open = false; });
+        choiceButtons.forEach((button, i) => { button.setAttribute('aria-checked', 'false'); button.tabIndex = i === 0 ? 0 : -1; });
+        byId('choice-reply').replaceChildren(); byId('choice-reply').hidden = true;
+        byId('ending-echo').textContent = ''; byId('ending-echo').hidden = true;
+        byId('ending-letter').hidden = false; byId('closed').hidden = true;
+        byId('share-status').textContent = ''; byId('manual-share').hidden = true; byId('share-text').value = '';
+        byId('share').disabled = false;
+        showScene(0);
+      }
+      document.querySelectorAll('[data-next]').forEach(button => button.addEventListener('click', () => showScene(state.scene + 1)));
+      document.querySelectorAll('[data-restart]').forEach(button => button.addEventListener('click', restart));
+      byId('back').addEventListener('click', () => showScene(state.scene - 1));
+      choiceButtons.forEach((button, i) => {
+        button.addEventListener('click', () => selectChoice(button.dataset.choice));
+        button.addEventListener('keydown', event => {
+          let next;
+          if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (i + 1) % 4;
+          else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (i + 3) % 4;
+          else if (event.key === 'Home') next = 0;
+          else if (event.key === 'End') next = 3;
+          else return;
+          event.preventDefault(); selectChoice(choiceButtons[next].dataset.choice); choiceButtons[next].focus();
+        });
+      });
+      byId('keep').addEventListener('click', () => {
+        state.closed = true;
+        byId('ending-letter').hidden = true; byId('closed').hidden = false; byId('back').hidden = true;
+        window.scrollTo(0, 0); byId('closed-title').focus({ preventScroll: true });
+      });
+      function manualShare(text) {
+        byId('share-text').value = text; byId('manual-share').hidden = false;
+        byId('share-status').textContent = '自动复制不可用，可以手动复制。';
+      }
+      byId('select-share').addEventListener('click', () => { byId('share-text').focus(); byId('share-text').select(); byId('share-text').setSelectionRange(0, byId('share-text').value.length); });
+      byId('share').addEventListener('click', async () => {
+        const revision = state.revision;
+        const text = state.choice ? `我读完了「一些会走向你的小念头」。下次见面，我想${choices[state.choice].label}。下次见面，先抱一下吧。` : '我读完了「一些会走向你的小念头」。下次见面，先抱一下吧。';
+        const button = byId('share'); button.disabled = true;
+        byId('share-status').textContent = ''; byId('manual-share').hidden = true;
+        try {
+          if (window.isSecureContext && typeof navigator.share === 'function') {
+            try { await navigator.share({ title: '一些会走向你的小念头', text }); return; }
+            catch (error) { if (error.name === 'AbortError' || revision !== state.revision) return; }
+          }
+          try {
+            if (!navigator.clipboard || !window.isSecureContext) throw new Error('Manual copy needed');
+            await navigator.clipboard.writeText(text);
+            if (revision === state.revision) byId('share-status').textContent = '文字已复制，可以亲手发给他。';
+          } catch { if (revision === state.revision) manualShare(text); }
+        } finally { if (revision === state.revision) button.disabled = false; }
+      });
+      document.querySelectorAll('.art img').forEach(img => {
+        const hideFailedArt = () => { img.hidden = true; img.parentElement.hidden = true; };
+        img.addEventListener('error', hideFailedArt);
+        if (img.complete && img.naturalWidth === 0) hideFailedArt();
+      });
+      showScene(0, false);
+    })();
+  </script>
+</body>
+</html>
